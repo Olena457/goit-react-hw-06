@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { FaRegAddressBook } from 'react-icons/fa6';
 import css from './ContactForm.module.css';
 
 import { useId } from 'react';
@@ -32,57 +33,54 @@ function ContactForm() {
   };
 
   return (
-    <>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
+    >
+      <>
         <div className={css.phoneBook}>
-          <div className={css.title}>Phonebook</div>
-          <div className={css.contactForm}>
-            <Form>
-              <div>
-                <label className={css.contactFormlabel} htmlFor={nameFieldId}>
-                  Name
-                </label>
-                <Field
-                  className={css.contactFormInput}
-                  type="text"
-                  name="number"
-                  id={nameFieldId}
-                />
-                <ErrorMessage
-                  className={css.error}
-                  name="name"
-                  component="span"
-                />
-              </div>
-              <div>
-                <label className={css.contactFormlabel} htmlFor={telFieldId}>
-                  Number
-                </label>
-                <Field
-                  className={css.contactFormInput}
-                  type="text"
-                  name="number"
-                  id={telFieldId}
-                />
-                <ErrorMessage
-                  className={css.error}
-                  name="number"
-                  component="span"
-                />
-              </div>
-
-              <button className={css.contactFormBtn} type="submit">
-                Add contact
-              </button>
-            </Form>
-          </div>
+          <FaRegAddressBook className={css.homeIcon} />
+          Phonebook
         </div>
-      </Formik>
-    </>
+
+        <Form className={css.contactForm}>
+          <label className={css.contactFormlabel} htmlFor={nameFieldId}>
+            Name
+          </label>
+          <div className={css.fieldWrapper}>
+            <Field
+              className={css.contactFormInput}
+              type="text"
+              name="name"
+              id={nameFieldId}
+            />
+            <ErrorMessage className={css.error} name="name" component="span" />
+          </div>
+
+          <label className={css.contactFormlabel} htmlFor={telFieldId}>
+            Number
+          </label>
+          <div className={css.fieldWrapper}>
+            <Field
+              className={css.contactFormInput}
+              type="text"
+              name="number"
+              id={telFieldId}
+            />
+            <ErrorMessage
+              className={css.error}
+              name="number"
+              component="span"
+            />
+          </div>
+
+          <button className={css.contactFormBtn} type="submit">
+            Add contact
+          </button>
+        </Form>
+      </>
+    </Formik>
   );
 }
 export default ContactForm;

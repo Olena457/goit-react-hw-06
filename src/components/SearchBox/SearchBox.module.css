@@ -1,11 +1,22 @@
 .SearchBox {
-  margin-bottom: 25px;
-  max-width: 250px;
+  margin-top: 20px;
 }
 .label {
-  font-size: 18px;
+  width: 300px;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 24px 0px 0px 125px;
 }
 .input {
+  display: block;
+  height: 30px;
+  width: 300px;
   padding: 5px;
-  width: 95%;
+  margin-left: 78px;
+  margin-right: 78px;
+  border-radius: 4px;
+  background-color: wheat;
+  box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
+    10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
