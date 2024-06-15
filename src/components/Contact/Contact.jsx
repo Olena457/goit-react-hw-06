@@ -1,11 +1,11 @@
 import css from './Contact.module.css';
 import { RiUser3Fill } from 'react-icons/ri';
 import { BiSolidPhone } from 'react-icons/bi';
-import { useDispath } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contactsSlice';
 
 export default function Contact({ contact: { name, number, id } }) {
-  const dispatch = useDispath();
+  const dispatch = useDispatch();
 
   const handleDeleteContact = id => {
     dispatch(deleteContact(id));
