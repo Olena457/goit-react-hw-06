@@ -11,10 +11,10 @@
 .input {
   display: block;
   height: 30px;
-  width: 300px;
+  width: 400px;
   padding: 5px;
-  margin-left: 78px;
-  margin-right: 78px;
+  margin-left: 20px;
+  margin-bottom: 30px;
   border-radius: 4px;
   background-color: wheat;
   box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),

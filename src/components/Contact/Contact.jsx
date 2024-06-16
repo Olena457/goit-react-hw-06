@@ -12,14 +12,16 @@ export default function Contact({ contact: { name, number, id } }) {
   };
 
   return (
-    <div className={css.userCard}>
-      <div className={css.userInfo}>
-        <span className={css.userName}>
-          <RiUser3Fill /> {name}
-        </span>
-        <span>
-          <BiSolidPhone /> {number}
-        </span>
+    <>
+      <div className={css.userCard}>
+        <div className={css.userInfo}>
+          <RiUser3Fill />
+          <p className={css.userName}>{name}</p>
+        </div>
+        <div className={css.userInfo}>
+          <BiSolidPhone />
+          <p className={css.userName}>{number}</p>
+        </div>
       </div>
       <button
         className={css.deleteBtn}
@@ -28,6 +30,6 @@ export default function Contact({ contact: { name, number, id } }) {
       >
         Delete
       </button>
-    </div>
+    </>
   );
 }

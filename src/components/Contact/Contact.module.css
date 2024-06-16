@@ -1,19 +1,13 @@
 .userCard {
-  border: 1px solid #000;
-  background-color: wheat;
-  border-radius: 5px;
-  padding: 10px;
+  flex-direction: column;
+  gap: 8px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 0.5px solid #474f52;
-  box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.5),
-    10px 0 10px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .userInfo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .userName {
@@ -21,6 +15,8 @@
 }
 
 .deleteBtn {
+  width: 100px;
+  height: 50px;
   background-color: #ff0000;
   color: black;
   margin: 10px;
